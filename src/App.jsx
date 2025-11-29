@@ -11,10 +11,12 @@ const title = "React calculator";
 
 function App() {
     return (
-        <div className="App">
-            <h1>{title}</h1>
-            <CalculatorForm />
-            <h3>Created by Trixs</h3>
+        <div className="App-background">
+            <div className="App">
+                <h1>{title}</h1>
+                <CalculatorForm />
+                <h3>Created by Trixs</h3>
+            </div>
         </div>
     );
 }

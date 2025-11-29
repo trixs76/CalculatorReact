@@ -4,20 +4,83 @@
   padding: 2rem;
   text-align: center;
 }
+/* ===== BACKGROUND WRAPPER ===== */
+.App-background {
+  background-image: url("/background_calculator.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 80px;       /* default padding for large screens */
+  min-height: 80vh;    /* always at least full screen height */
+  width: 100%;
+}
+
+
+/* ===== MAIN APP WINDOW ===== */
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: rgb(255, 255, 255);
+
+  background-color: white;
   color: black;
   padding: 2em;
   border-color: #95ceea;
   border-width: 2px;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 2, 1.0) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.45) 0px -5px 6px 0px inset;
+
+  box-shadow: rgba(0, 0, 2, 1.0) 0px 50px 100px -20px,
+              rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+              rgba(10, 37, 64, 0.45) 0px -5px 6px 0px inset;
+
+  width: 100%;
+  max-width: 400px;     /* original width */
 }
+
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Tablets (up to 900px wide) */
+@media (max-width: 900px) {
+  .App-background {
+    padding: 50px;
+  }
+  .App {
+    max-width: 400px;
+    padding: 1.5em;
+  }
+}
+
+/* Mobile phones (up to 600px wide) */
+@media (max-width: 600px) {
+  .App-background {
+    padding: 20px;
+  }
+  .App {
+    max-width: 100%;
+    padding: 1em;
+    border-width: 1px;
+  }
+}
+
+/* Extra small screens (up to 400px wide) */
+@media (max-width: 400px) {
+  .App-background {
+    padding: 10px;
+  }
+  .App {
+    padding: 0.7em;
+    border-radius: 15px;
+    width: 368px;
+  }
+}
+
 
 label {
   display: block;
