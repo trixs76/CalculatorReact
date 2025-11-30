@@ -10,11 +10,9 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 80px;       /* default padding for large screens */
   min-height: 80vh;    /* always at least full screen height */
   width: 100%;
